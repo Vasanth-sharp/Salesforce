@@ -1,8 +1,10 @@
 const express=require("express")
 const xml2js=require("xml2js")
 const bodyparser=require("body-parser")
+const cors=require('cors')
 const app=express()
 
+app.use(cors())
 app.use(bodyparser.text({type:"application/xml"}))
 
 app.listen(4000,()=>console.log("I am listening..."))
